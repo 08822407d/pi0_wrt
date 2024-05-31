@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.S": "gas",
+        "errno.h": "c"
+    }
+}
