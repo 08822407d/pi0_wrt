@@ -39,4 +39,4 @@
 
 	extern WS_EPD_s EPD_2in13_V4;
 
-#endif
+#endif /* _EPD_GENERICE_H_ */

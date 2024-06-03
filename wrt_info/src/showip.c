@@ -7,6 +7,7 @@
 
 #include "EPD.h"
 #include "EPD_Test.h"
+#include "utils.h"
 
 
 #define SEC_PER_MIN			60
@@ -19,15 +20,14 @@
 #define IP_BUFLEN			16
 
 
-char last_IP[IP_BUFLEN];
-char IP_msg[IP_MSG_BUFLEN];
-char tmp_buf[IP_BUFLEN];
-
+char *new_ip = NULL;
+char *new_eth_state = NULL;
+char *new_wlan_state = NULL;
 
 void refresh_EPaper_handler(int param) {
 	EPD_2in13_V4_Clear();
 	EPD_2in13_V4_Init();
-	memset(last_IP, 0, IP_BUFLEN);
+	new_ip = getNewIpAddr();
 	alarm(REFRESH_INTERVAL);
 }
 
@@ -58,41 +58,17 @@ int showip(void)
 
 
 	while (1) {
-		usleep(500 * 1000);
-
-		FILE *cmd_fp = popen("hostname -I", "r");
-		if (cmd_fp == NULL)
-			return -1;
-		
-		char *fgets_ret = fgets(tmp_buf, IP_BUFLEN - 1, cmd_fp);
-		pclose(cmd_fp);
-
-		if (fgets_ret == NULL)
-			continue;
-
-		char *end_idx = strchr(tmp_buf, ' ');
-		if (end_idx != NULL)
-			memset(end_idx, 0, IP_BUFLEN - (end_idx - tmp_buf));
-		else
-			tmp_buf[IP_BUFLEN - 1] = 0;
-		if (tmp_buf[0] == '\n') {
-			//printf("[ %d - %d] \n", (unsigned char)tmp_buf[0], (unsigned char)tmp_buf[0]);
-			strncpy(tmp_buf, "!!! 0.0.0.0 !!!", IP_BUFLEN);
-			tmp_buf[IP_BUFLEN - 1] = 0;
-		}
-		// printf("\033[;32;m %s / %s\033[0m \n", tmp_buf, last_IP);
-
-
-		if (strcmp(tmp_buf, last_IP) != 0) {
+		new_ip = getNewIpAddr();
+		new_eth_state = getNewEthState();
+		new_wlan_state = getNewWlanState();
+		if (new_ip != NULL) {
 			Paint_Clear(WHITE);
-			sprintf(IP_msg, "IP: %s", tmp_buf);
-			// printf("%s\n", IP_msg);
-			Paint_DrawString_EN(0, 0, IP_msg, &Font16, WHITE, BLACK);
+			Paint_DrawString_EN(0, 0, new_ip, &Font16, WHITE, BLACK);
 			EPD_2in13_V4_Display_Fast(BlackImage);
-
-			strncpy(last_IP, tmp_buf, IP_BUFLEN);
-			memset(tmp_buf, 0, IP_BUFLEN);
+			new_ip = NULL;
 		}
+
+		usleep(500 * 1000);
 	}
 
 	alarm(0);

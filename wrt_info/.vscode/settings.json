@@ -7,6 +7,7 @@
         "epd_test.h": "c",
         "dev_hardware_spi.h": "c",
         "dev_config.h": "c",
-        "gpiod.h": "c"
+        "gpiod.h": "c",
+        "epd_2in13.h": "c"
     }
 }
