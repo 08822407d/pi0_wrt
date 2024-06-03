@@ -40,7 +40,6 @@
 
 void EPD_2in13_V4_Init(void);
 void EPD_2in13_V4_Init_Fast(void);
-void EPD_2in13_V4_Init_GUI(void);
 void EPD_2in13_V4_Clear(void);
 void EPD_2in13_V4_Clear_Black(void);
 void EPD_2in13_V4_Display(UBYTE *Image);

@@ -1,6 +1,10 @@
 {
     "files.associations": {
         "*.S": "gas",
-        "errno.h": "c"
+        "errno.h": "c",
+        "epd_1in54c.h": "c",
+        "epd.h": "c",
+        "epd_test.h": "c",
+        "dev_hardware_spi.h": "c"
     }
 }

@@ -30,7 +30,7 @@ void refresh_EPaper_handler(int param) {
 	alarm(REFRESH_INTERVAL);
 }
 
-int EPD_2in13_V4_showip(void)
+int showip(void)
 {
 	if(DEV_Module_Init()!=0)
 		return -1;
