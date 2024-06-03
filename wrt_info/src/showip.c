@@ -5,8 +5,8 @@
 #include <signal.h>
 #include <errno.h>
 
+#include "EPD.h"
 #include "EPD_Test.h"
-#include "EPD_2in13_V4.h"
 
 
 #define SEC_PER_MIN			60
@@ -26,6 +26,7 @@ char tmp_buf[IP_BUFLEN];
 
 void refresh_EPaper_handler(int param) {
 	EPD_2in13_V4_Clear();
+	EPD_2in13_V4_Init();
 	memset(last_IP, 0, IP_BUFLEN);
 	alarm(REFRESH_INTERVAL);
 }
@@ -37,14 +38,6 @@ int showip(void)
 
 	EPD_2in13_V4_Init();
 	EPD_2in13_V4_Clear();
-
-
-	// struct timespec start={0,0}, finish={0,0}; 
-	// clock_gettime(CLOCK_REALTIME, &start);
-	// EPD_2in13_V4_Clear();
-	// clock_gettime(CLOCK_REALTIME, &finish);
-	// Debug("%ld S\r\n",finish.tv_sec-start.tv_sec);	
-
 
 	//Create a new image cache
 	UBYTE *BlackImage;
@@ -65,6 +58,8 @@ int showip(void)
 
 
 	while (1) {
+		usleep(500 * 1000);
+
 		FILE *cmd_fp = popen("hostname -I", "r");
 		if (cmd_fp == NULL)
 			return -1;
@@ -72,31 +67,32 @@ int showip(void)
 		char *fgets_ret = fgets(tmp_buf, IP_BUFLEN - 1, cmd_fp);
 		pclose(cmd_fp);
 
-		if (fgets_ret == NULL && errno != 0) {
-			printf("\033[;31;m Err:%s \033[0m\n", strerror(errno));
-			sleep(1);
+		if (fgets_ret == NULL)
 			continue;
-		}
+
 		char *end_idx = strchr(tmp_buf, ' ');
 		if (end_idx != NULL)
 			memset(end_idx, 0, IP_BUFLEN - (end_idx - tmp_buf));
 		else
-			tmp_buf[IP_BUFLEN] = 0;
-		printf("\033[;32;m %s / %s\033[0m \n", tmp_buf, last_IP);
-
-
-		if (strncmp(tmp_buf, last_IP, IP_BUFLEN) != 0) {
-			Paint_Clear(WHITE);
-			sprintf(IP_msg, "IP:%s", tmp_buf);
-			Paint_DrawString_EN(0, 0, IP_msg, &Font20, WHITE, BLACK);
-			EPD_2in13_V4_Display_Fast(BlackImage);
-			// DEV_Delay_ms(2000);
+			tmp_buf[IP_BUFLEN - 1] = 0;
+		if (tmp_buf[0] == '\n') {
+			//printf("[ %d - %d] \n", (unsigned char)tmp_buf[0], (unsigned char)tmp_buf[0]);
+			strncpy(tmp_buf, "!!! 0.0.0.0 !!!", IP_BUFLEN);
+			tmp_buf[IP_BUFLEN - 1] = 0;
 		}
+		// printf("\033[;32;m %s / %s\033[0m \n", tmp_buf, last_IP);
 
-		strncpy(last_IP, tmp_buf, IP_BUFLEN);
-		memset(tmp_buf, 0, IP_BUFLEN);
 
-		sleep(1);
+		if (strcmp(tmp_buf, last_IP) != 0) {
+			Paint_Clear(WHITE);
+			sprintf(IP_msg, "IP: %s", tmp_buf);
+			// printf("%s\n", IP_msg);
+			Paint_DrawString_EN(0, 0, IP_msg, &Font16, WHITE, BLACK);
+			EPD_2in13_V4_Display_Fast(BlackImage);
+
+			strncpy(last_IP, tmp_buf, IP_BUFLEN);
+			memset(tmp_buf, 0, IP_BUFLEN);
+		}
 	}
 
 	alarm(0);

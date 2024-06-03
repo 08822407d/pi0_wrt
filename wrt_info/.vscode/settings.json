@@ -5,6 +5,8 @@
         "epd_1in54c.h": "c",
         "epd.h": "c",
         "epd_test.h": "c",
-        "dev_hardware_spi.h": "c"
+        "dev_hardware_spi.h": "c",
+        "dev_config.h": "c",
+        "gpiod.h": "c"
     }
 }
