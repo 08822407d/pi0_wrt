@@ -46,6 +46,7 @@ void EPD_2in13_V4_Display(UBYTE *Image);
 void EPD_2in13_V4_Display_Fast(UBYTE *Image);
 void EPD_2in13_V4_Display_Base(UBYTE *Image);
 void EPD_2in13_V4_Display_Partial(UBYTE *Image);
+// void EPD_2in13_V4_Display_Partial(UBYTE *Image, UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend);
 void EPD_2in13_V4_Sleep(void);
 
 

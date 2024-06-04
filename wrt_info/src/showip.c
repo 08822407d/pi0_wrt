@@ -4,11 +4,14 @@
 #include <unistd.h>
 #include <signal.h>
 #include <errno.h>
+#include <stdbool.h>
 
 #include "EPD.h"
 #include "EPD_Test.h"
 #include "utils.h"
 
+#define WIDTH				250
+#define HEIGHT				122
 
 #define SEC_PER_MIN			60
 #define MIN_PER_HOUR		60
@@ -20,14 +23,15 @@
 #define IP_BUFLEN			16
 
 
-char *new_ip = NULL;
-char *new_eth_state = NULL;
-char *new_wlan_state = NULL;
+char ip_buf[IP_MSG_BUFLEN];
+char eth_state_buf[IP_MSG_BUFLEN];
+char wlan_state_buf[IP_MSG_BUFLEN];
+bool need_refresh = false;
 
 void refresh_EPaper_handler(int param) {
 	EPD_2in13_V4_Clear();
 	EPD_2in13_V4_Init();
-	new_ip = getNewIpAddr();
+	need_refresh = true;
 	alarm(REFRESH_INTERVAL);
 }
 
@@ -41,15 +45,13 @@ int showip(void)
 
 	//Create a new image cache
 	UBYTE *BlackImage;
-	UWORD Imagesize = ((EPD_2in13_V4_WIDTH % 8 == 0)?
-						(EPD_2in13_V4_WIDTH / 8 ):
-						(EPD_2in13_V4_WIDTH / 8 + 1)) * EPD_2in13_V4_HEIGHT;
+	UWORD Imagesize = ((HEIGHT % 8 == 0) ? (HEIGHT / 8 ) : (HEIGHT / 8 + 1)) * WIDTH;
 	if((BlackImage = (UBYTE *)malloc(Imagesize)) == NULL) {
 		Debug("Failed to apply for black memory...\r\n");
 		return -1;
 	}
 	Debug("Paint_NewImage\r\n");
-	Paint_NewImage(BlackImage, EPD_2in13_V4_WIDTH, EPD_2in13_V4_HEIGHT, 270, WHITE);
+	Paint_NewImage(BlackImage, HEIGHT, WIDTH, 90, WHITE);
 	Paint_SelectImage(BlackImage);
 	Paint_Clear(WHITE);
 
@@ -58,14 +60,17 @@ int showip(void)
 
 
 	while (1) {
-		new_ip = getNewIpAddr();
-		new_eth_state = getNewEthState();
-		new_wlan_state = getNewWlanState();
-		if (new_ip != NULL) {
+		need_refresh = getNewIpAddr(ip_buf) |
+						getNewEthState(eth_state_buf) |
+						getNewWlanState(wlan_state_buf);
+		// printf("%s | %s | %s\n", ip_buf, eth_state_buf, wlan_state_buf);
+		if (need_refresh) {
 			Paint_Clear(WHITE);
-			Paint_DrawString_EN(0, 0, new_ip, &Font16, WHITE, BLACK);
+			Paint_DrawString_EN(5, 5, ip_buf, &Font16, WHITE, BLACK);
+			Paint_DrawString_EN(5, 25, eth_state_buf, &Font16, WHITE, BLACK);
+			Paint_DrawString_EN(5, 45, wlan_state_buf, &Font16, WHITE, BLACK);
 			EPD_2in13_V4_Display_Fast(BlackImage);
-			new_ip = NULL;
+			need_refresh = false;
 		}
 
 		usleep(500 * 1000);

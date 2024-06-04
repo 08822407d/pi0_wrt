@@ -2,6 +2,7 @@
 #include <string.h>
 #include <time.h> 
 #include <unistd.h>
+#include <stdbool.h>
 
 #include "utils.h"
 
@@ -12,10 +13,9 @@
 
 static char last_IP[IP_BUFLEN] = "";
 static char tmp_ip_buf[IP_BUFLEN] = "";
-static char IP_msg[IP_MSG_BUFLEN] = "";
 
-char *getNewIpAddr() {
-	char *retval = NULL;
+bool getNewIpAddr(char *IPMsg_bufp) {
+	bool retval = false;
 	while (1) {
 		FILE *cmd_fp = popen("hostname -I", "r");
 		if (cmd_fp == NULL)
@@ -35,10 +35,9 @@ char *getNewIpAddr() {
 			tmp_ip_buf[IP_BUFLEN - 1] = 0;
 		}
 		if (strcmp(tmp_ip_buf, last_IP) != 0) {
-			sprintf(IP_msg, "IP: %s", tmp_ip_buf);
-			retval = IP_msg;
+			sprintf(IPMsg_bufp, "IP: %s", tmp_ip_buf);
 			strncpy(last_IP, tmp_ip_buf, IP_BUFLEN);
-			memset(tmp_ip_buf, 0, IP_BUFLEN);
+			retval = true;
 		}
 		break;
 
@@ -53,37 +52,30 @@ retry:
 
 
 #define STATE_MSG_BUFLEN	32
-#define STAT_BUFLEN			128
 
 static char last_eth_state[STATE_MSG_BUFLEN] = "";
-static char tmp_eth_buf[STAT_BUFLEN] = "";
-static char EthState_msg[STATE_MSG_BUFLEN] = "";
 
-char *getNewEthState() {
-	char *retval = NULL;
-	char *curr_state = NULL;
-
+bool getNewEthState(char *EthStateMsg_bufp) {
+	bool retval = false;
 	while (1) {
-		FILE *cmd_fp = popen("nmcli dev show eth0 | grep STATE", "r");
+		FILE *cmd_fp = popen("nmcli -t -f DEVICE,STATE d | grep eth0", "r");
 		if (cmd_fp == NULL)
 			goto retry;
 		
-		char *fgets_ret = fgets(tmp_eth_buf, STAT_BUFLEN - 1, cmd_fp);
+		char *fgets_ret = fgets(EthStateMsg_bufp, STATE_MSG_BUFLEN - 1, cmd_fp);
 		pclose(cmd_fp);
 		if (fgets_ret == NULL)
 			goto retry;
 
-		if (strstr(tmp_eth_buf, "connected") != NULL)
-			curr_state = "connected";
-		else if (strstr(tmp_eth_buf, "disabled") != NULL)
-			curr_state = "disabled";
-		else
-			curr_state = "no device";
-
-		if (strcmp(curr_state, last_eth_state) != 0) {
-			sprintf(EthState_msg, "eth0 : %s", curr_state);
-			strcpy(last_eth_state, curr_state);
-			retval = EthState_msg;
+		char *newline_ptr = strchr(EthStateMsg_bufp, '\n');
+		if (newline_ptr != NULL)
+			*newline_ptr = 0;
+		char *bracket_ptr = strchr(EthStateMsg_bufp, '(');
+		if (bracket_ptr != NULL)
+			*bracket_ptr = 0;
+		if (strcmp(EthStateMsg_bufp, last_eth_state) != 0) {
+			strcpy(last_eth_state, EthStateMsg_bufp);
+			retval = true;
 		}
 		break;
 
@@ -95,34 +87,28 @@ retry:
 }
 
 static char last_wlan_state[STATE_MSG_BUFLEN] = "";
-static char tmp_wlan_buf[STAT_BUFLEN] = "";
-static char WlanState_msg[STATE_MSG_BUFLEN] = "";
 
-char *getNewWlanState() {
-	char *retval = NULL;
-	char *curr_state = NULL;
-
+bool getNewWlanState(char *WlanStateMsg_bufp) {
+	bool retval = false;
 	while (1) {
-		FILE *cmd_fp = popen("nmcli dev show wlan0 | grep STATE", "r");
+		FILE *cmd_fp = popen("nmcli -t -f DEVICE,STATE d | grep wlan0", "r");
 		if (cmd_fp == NULL)
 			goto retry;
 		
-		char *fgets_ret = fgets(tmp_wlan_buf, STAT_BUFLEN - 1, cmd_fp);
+		char *fgets_ret = fgets(WlanStateMsg_bufp, STATE_MSG_BUFLEN - 1, cmd_fp);
 		pclose(cmd_fp);
 		if (fgets_ret == NULL)
 			goto retry;
 
-		if (strstr(tmp_wlan_buf, "connected") != NULL)
-			curr_state = "connected";
-		else if (strstr(tmp_wlan_buf, "disabled") != NULL)
-			curr_state = "disabled";
-		else
-			curr_state = "no device";
-
-		if (strcmp(curr_state, last_wlan_state) != 0) {
-			sprintf(WlanState_msg, "eth0 : %s", curr_state);
-			strcpy(last_wlan_state, curr_state);
-			retval = WlanState_msg;
+		char *newline_ptr = strchr(WlanStateMsg_bufp, '\n');
+		if (newline_ptr != NULL)
+			*newline_ptr = 0;
+		char *bracket_ptr = strchr(WlanStateMsg_bufp, '(');
+		if (bracket_ptr != NULL)
+			*bracket_ptr = 0;
+		if (strcmp(WlanStateMsg_bufp, last_wlan_state) != 0) {
+			strcpy(last_wlan_state, WlanStateMsg_bufp);
+			retval = true;
 		}
 		break;
 

@@ -8,6 +8,7 @@
         "dev_hardware_spi.h": "c",
         "dev_config.h": "c",
         "gpiod.h": "c",
-        "epd_2in13.h": "c"
+        "epd_2in13.h": "c",
+        "string.h": "c"
     }
 }

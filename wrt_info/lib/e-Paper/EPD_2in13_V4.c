@@ -357,6 +357,39 @@ void EPD_2in13_V4_Display_Partial(UBYTE *Image)
 	}
 	EPD_2in13_V4_TurnOnDisplay_Partial();
 }
+// void EPD_2in13_V4_Display_Partial(UBYTE *Image, UWORD Xstart, UWORD Ystart, UWORD Xlen, UWORD Ylen)
+// {
+// 	UWORD Width, Height;
+//     Width = (Xlen % 8 == 0)? (Xlen / 8 ): (Xlen / 8 + 1);
+//     Height = Ylen;
+	
+// 	//Reset
+//     DEV_Digital_Write(EPD_RST_PIN, 0);
+//     DEV_Delay_ms(1);
+//     DEV_Digital_Write(EPD_RST_PIN, 1);
+
+// 	EPD_2in13_V4_SendCommand(0x3C); //BorderWavefrom
+// 	EPD_2in13_V4_SendData(0x80);	
+
+// 	EPD_2in13_V4_SendCommand(0x01); //Driver output control      
+// 	EPD_2in13_V4_SendData(0xF9);
+// 	EPD_2in13_V4_SendData(0x00);
+// 	EPD_2in13_V4_SendData(0x00);
+	
+// 	EPD_2in13_V4_SendCommand(0x11); //data entry mode       
+// 	EPD_2in13_V4_SendData(0x03);
+
+// 	EPD_2in13_V4_SetWindows(Xstart, Ystart, Xlen-1, Ylen-1);
+// 	EPD_2in13_V4_SetCursor(0, 0);
+
+// 	EPD_2in13_V4_SendCommand(0x24);   //Write Black and White image to RAM
+//     for (UWORD j = 0; j < Height; j++) {
+//         for (UWORD i = 0; i < Width; i++) {
+// 			EPD_2in13_V4_SendData(Image[i + j * Width]);
+// 		}
+// 	}
+// 	EPD_2in13_V4_TurnOnDisplay_Partial();
+// }
 
 /******************************************************************************
 function :	Enter sleep mode

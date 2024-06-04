@@ -8,7 +8,7 @@
 			"name": "remote debug",
 			"type": "cppdbg",
 			"request": "launch",
-			"program": "${workspaceFolder}/showip",
+			"program": "${workspaceFolder}/wrt_info",
 			"args": [],
 			"stopAtEntry": false,
 			"cwd": "${workspaceFolder}",
@@ -23,7 +23,6 @@
 				}
 			],
 			// "preLaunchTask": "g++ build active file",
-			"postDebugTask": "delete output file",
 			"miDebuggerPath": "/usr/bin/gdb"
 		}
 	]
