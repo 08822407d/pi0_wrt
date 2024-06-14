@@ -16,23 +16,33 @@
 #define SEC_PER_MIN			60
 #define MIN_PER_HOUR		60
 #define REFRESH_INTERVAL	(2 * SEC_PER_MIN * MIN_PER_HOUR)
-// #define REFRESH_INTERVAL	60
+// #define REFRESH_INTERVAL	10
 
 
 #define IP_MSG_BUFLEN		32
 #define IP_BUFLEN			16
 
 
+UBYTE *BlackImage = NULL;
 char ip_buf[IP_MSG_BUFLEN];
 char eth_state_buf[IP_MSG_BUFLEN];
 char wlan_state_buf[IP_MSG_BUFLEN];
 bool need_refresh = false;
+bool inRefreshing = false;
 
 void refresh_EPaper_handler(int param) {
-	EPD_2in13_V4_Clear();
-	EPD_2in13_V4_Init();
+	// if (BlackImage != NULL)
+	// {
+	// 	Paint_Clear(WHITE);
+	// 	EPD_2in13_V4_Display(BlackImage);
+	// }
+	// // EPD_2in13_V4_Init();
+	// // EPD_2in13_V4_Clear();
 	need_refresh = true;
-	alarm(REFRESH_INTERVAL);
+	if (inRefreshing)
+		alarm(1);
+	else
+		alarm(REFRESH_INTERVAL);
 }
 
 int showip(void)
@@ -44,7 +54,6 @@ int showip(void)
 	EPD_2in13_V4_Clear();
 
 	//Create a new image cache
-	UBYTE *BlackImage;
 	UWORD Imagesize = ((HEIGHT % 8 == 0) ? (HEIGHT / 8 ) : (HEIGHT / 8 + 1)) * WIDTH;
 	if((BlackImage = (UBYTE *)malloc(Imagesize)) == NULL) {
 		Debug("Failed to apply for black memory...\r\n");
@@ -60,20 +69,24 @@ int showip(void)
 
 
 	while (1) {
-		need_refresh = getNewIpAddr(ip_buf) |
-						getNewEthState(eth_state_buf) |
-						getNewWlanState(wlan_state_buf);
-		// printf("%s | %s | %s\n", ip_buf, eth_state_buf, wlan_state_buf);
-		if (need_refresh) {
+		printf("Cycle - %s | %s | %s\n", ip_buf, eth_state_buf, wlan_state_buf);
+
+		inRefreshing = true;
+		if (!need_refresh) {
+			need_refresh = getNewIpAddr(ip_buf) |
+							getNewEthState(eth_state_buf) |
+							getNewWlanState(wlan_state_buf);
+		} else {
 			Paint_Clear(WHITE);
 			Paint_DrawString_EN(5, 5, ip_buf, &Font16, WHITE, BLACK);
 			Paint_DrawString_EN(5, 25, eth_state_buf, &Font16, WHITE, BLACK);
 			Paint_DrawString_EN(5, 45, wlan_state_buf, &Font16, WHITE, BLACK);
-			EPD_2in13_V4_Display_Fast(BlackImage);
+			EPD_2in13_V4_Display(BlackImage);
 			need_refresh = false;
 		}
+		inRefreshing = false;
 
-		usleep(500 * 1000);
+		sleep(1);
 	}
 
 	alarm(0);

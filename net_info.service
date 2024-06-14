@@ -3,7 +3,9 @@ Description=RPI0-WRT Service
 After=network.target
 
 [Service]
+Type=simple
 ExecStart=/usr/local/bin/wrt_info
+ExecReload=/usr/local/bin/wrt_info
 Restart=always
 RestartSec=5
 User=cheyh

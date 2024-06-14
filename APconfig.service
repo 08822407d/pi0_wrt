@@ -1,0 +1,15 @@
+[Unit]
+Description=APconfig Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/APconfig.sh
+ExecReload=/usr/local/bin/APconfig.sh
+Restart=always
+RestartSec=60
+User=cheyh
+Group=cheyh
+
+[Install]
+WantedBy=multi-user.target
