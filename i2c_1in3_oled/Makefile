@@ -1,8 +1,9 @@
 DIR_FONTS = ./Fonts
 DIR_OBJ = ./obj
 DIR_BIN = ./bin
+DIR_SYSINFO = ./sysinfo
 
-OBJ_C = $(wildcard ${DIR_FONTS}/*.c ${DIR_OBJ}/*.c)
+OBJ_C = $(wildcard ${DIR_FONTS}/*.c ${DIR_OBJ}/*.c ${DIR_SYSINFO}/*.c)
 OBJ_O = $(patsubst %.c,${DIR_BIN}/%.o,$(notdir ${OBJ_C}))
 
 TARGET = main

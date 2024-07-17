@@ -1,0 +1,8 @@
+{
+    "cmake.sourceDirectory": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd",
+    "files.associations": {
+        "*.S": "gas",
+        "epd.h": "c",
+        "signal.h": "c"
+    }
+}

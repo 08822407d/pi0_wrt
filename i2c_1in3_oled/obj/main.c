@@ -1,15 +1,45 @@
 #include <stdio.h>		//printf()
 #include <stdlib.h>		//exit()
+#include <time.h>
+#include <signal.h>     //signal()
 
 #include "OLED_Driver.h"
 #include "OLED_GUI.h"
 #include "DEV_Config.h"
 #include "KEY_APP.h"
-#include <time.h>
+
+#include "network.h"
+// #include "../sysinfo/network.h"
+
+void systemExit()
+{
+	//System Exit
+	OLED_Clear(OLED_BACKGROUND);
+	OLED_Display();
+
+	printf("Goto Sleep...\r\n");
+	DEV_ModuleExit();
+}
+
+void terminateHandler(int signo)
+{
+	printf("\r\nHandler:exit\r\n");
+	DEV_ModuleInit();
+	systemExit();
+
+	exit(0);
+}
+
 
 char value[10] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
 int main(void)
 {
+	// Exception handling:ctrl + c
+	signal(SIGINT, terminateHandler);
+	// System shutdown handling
+	signal(SIGTERM, terminateHandler);
+
+
 	time_t now;
 	struct tm *timenow;
 	int i;
@@ -20,7 +50,7 @@ int main(void)
 	//2.show
 	printf("**********Init OLED**********\r\n");
 	OLED_SCAN_DIR OLED_ScanDir = SCAN_DIR_DFT;//SCAN_DIR_DFT = D2U_L2R
-	OLED_Init(OLED_ScanDir );	
+	OLED_Init(OLED_ScanDir);	
 	
 	printf("OLED Show \r\n");
 	GUI_Show();
@@ -30,45 +60,26 @@ int main(void)
 		time(&now);
 		timenow = localtime(&now);
 	
-		GUI_Disbitmap(0, 0, Eth_Available, 32, 32);
-		GUI_Disbitmap(32, 0, Eth_UnAvailable, 32, 32);
-		GUI_Disbitmap(0, 32, AP_Available, 32, 32);
-		GUI_Disbitmap(32, 32, AP_UnAvailable, 32, 32);
+		if (IsEthConnected())
+			GUI_Disbitmap(0, 0, Eth_Available, 32, 32);
+		else
+			GUI_Disbitmap(0, 0, Eth_UnAvailable, 32, 32);
 
-
-		// GUI_Disbitmap(0, 2, Signal816, 16, 8);
-		// GUI_Disbitmap(24, 2, Bluetooth88, 8, 8);
-		// GUI_Disbitmap(40, 2, Msg816, 16, 8);
-		// GUI_Disbitmap(64, 2, GPRS88, 8, 8);
-		// GUI_Disbitmap(90, 2, Alarm88, 8, 8);
-		// GUI_Disbitmap(112, 2, Bat816, 16, 8);
-		
-		// GUI_DisString_EN(0, 52, "MUSIC", &Font12, FONT_BACKGROUND, WHITE); 
-		// GUI_DisString_EN(52, 52, "MENU", &Font12, FONT_BACKGROUND, WHITE); 
-		// GUI_DisString_EN(98, 52, "PHONE", &Font12, FONT_BACKGROUND, WHITE);
-
-		// GUI_DisChar(0, 16, value[timenow->tm_hour / 10], &Font24, FONT_BACKGROUND, WHITE);
-		// GUI_DisChar(16, 16, value[timenow->tm_hour % 10], &Font24, FONT_BACKGROUND, WHITE);
-		// GUI_DisChar(32, 16, ':', &Font24, FONT_BACKGROUND, WHITE);
-		// GUI_DisChar(48, 16, value[timenow->tm_min / 10],  &Font24, FONT_BACKGROUND, WHITE);
-		// GUI_DisChar(64, 16, value[timenow->tm_min % 10],  &Font24, FONT_BACKGROUND, WHITE);
-		// GUI_DisChar(80, 16, ':',  &Font24, FONT_BACKGROUND, WHITE);
-		// GUI_DisChar(96, 16, value[timenow->tm_sec / 10],  &Font24, FONT_BACKGROUND, WHITE);
-		// GUI_DisChar(112, 16, value[timenow->tm_sec % 10],  &Font24, FONT_BACKGROUND, WHITE);
+		if (IsWlanConnected())
+			GUI_Disbitmap(0, 32, AP_Available, 32, 32);
+		else
+			GUI_Disbitmap(0, 32, AP_UnAvailable, 32, 32);
 		
 		OLED_Display();		
-		OLED_Clear(0x00);
-		// if(i==10){
-		// 	break;
-		// }
+		OLED_Clear(OLED_BACKGROUND);
+		usleep(500 * 1000);
 	}
-	DEV_Delay_ms(1000);
-	printf("KEY \r\n");
-	KEY_Listen();
 	
 	//3.System Exit
-	DEV_ModuleExit();
+	// OLED_Clear(OLED_BACKGROUND);
+	// OLED_Display();
+	// DEV_ModuleExit();
+	systemExit();
 	return 0;
-	
 }
 
