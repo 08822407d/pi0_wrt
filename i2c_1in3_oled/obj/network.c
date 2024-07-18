@@ -120,24 +120,50 @@ retry:
 }
 
 
-#define CMD_OUTBUF_LEN	1024
-static char state_up[] = "state UP";
-static char cmd_output_buf[1024];
-
-bool IsEthConnected() {
+char *getIpAddr() {
 	while (1) {
-		FILE *cmd_fp = popen("ip link show eth0 | grep \"state UP\"", "r");
+		FILE *cmd_fp = popen("hostname -I", "r");
 		if (cmd_fp == NULL)
 			goto retry;
 		
-		memset(cmd_output_buf, 0, CMD_OUTBUF_LEN);
-		char *fgets_ret = fgets(cmd_output_buf, CMD_OUTBUF_LEN - 1, cmd_fp);
+		char *fgets_ret = fgets(tmp_ip_buf, IP_BUFLEN, cmd_fp);
 		pclose(cmd_fp);
 		if (fgets_ret == NULL)
 			goto retry;
 
-		char *start_up_ptr = strstr(cmd_output_buf, state_up);
-		return !(start_up_ptr == NULL);
+		char *end_idx = strchr(tmp_ip_buf, ' ');
+		if (end_idx != NULL)
+			memset(end_idx, 0, IP_BUFLEN - (end_idx - tmp_ip_buf));
+		else {
+			if (tmp_ip_buf[0] == '\n')
+				strncpy(tmp_ip_buf, "!!! 0.0.0.0 !!!", IP_BUFLEN);
+			tmp_ip_buf[IP_BUFLEN - 1] = 0;
+		}
+		return tmp_ip_buf;
+
+retry:
+		usleep(100 * 1000);
+		continue;
+	}
+}
+
+#define CMD_OUTBUF_LEN	4096
+static char net_state_up[] = "state UP";
+static char cmd_output_buf[CMD_OUTBUF_LEN];
+
+bool IsEthConnected() {
+	while (1) {
+		FILE *cmd_fp = popen("ip link show eth0 | grep \"state UP\"", "r");
+		if (cmd_fp == NULL) {
+			printf("Get Eth State Failed.\t");
+			goto retry;
+		}
+		
+		memset(cmd_output_buf, 0, CMD_OUTBUF_LEN);
+		char *fgets_ret = fgets(cmd_output_buf, CMD_OUTBUF_LEN - 1, cmd_fp);
+		pclose(cmd_fp);
+
+		return !(fgets_ret == NULL);
 
 retry:
 		usleep(100 * 1000);
@@ -147,17 +173,38 @@ retry:
 bool IsWlanConnected() {
 	while (1) {
 		FILE *cmd_fp = popen("ip link show wlan0 | grep \"state UP\"", "r");
-		if (cmd_fp == NULL)
+		if (cmd_fp == NULL) {
+			printf("Get Wlan State Failed.\t");
 			goto retry;
+		}
 		
 		memset(cmd_output_buf, 0, CMD_OUTBUF_LEN);
 		char *fgets_ret = fgets(cmd_output_buf, CMD_OUTBUF_LEN - 1, cmd_fp);
 		pclose(cmd_fp);
-		if (fgets_ret == NULL)
-			goto retry;
 
-		char *start_up_ptr = strstr(cmd_output_buf, state_up);
-		return !(start_up_ptr == NULL);
+		return !(fgets_ret == NULL);
+
+retry:
+		usleep(100 * 1000);
+	}
+}
+
+
+static char proxy_connected[] = "saved";
+
+bool IsProxyConnected() {
+	while (1) {
+		FILE *cmd_fp = popen("wget --tries=1 --timeout=1 -O /dev/null \'google.com\' 2>&1 | grep \"saved\"", "r");
+		if (cmd_fp == NULL) {
+			printf("Get Proxy State Failed.\t");
+			goto retry;
+		}
+		
+		memset(cmd_output_buf, 0, CMD_OUTBUF_LEN);
+		char *fgets_ret = fgets(cmd_output_buf, CMD_OUTBUF_LEN - 1, cmd_fp);
+		pclose(cmd_fp);
+
+		return !(fgets_ret == NULL);
 
 retry:
 		usleep(100 * 1000);

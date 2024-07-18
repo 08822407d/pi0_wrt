@@ -11,6 +11,15 @@
 #include "network.h"
 // #include "../sysinfo/network.h"
 
+
+int eth_x = 8;
+int eth_y = 24;
+int wlan_x = 48;
+int wlan_y = 24;
+int proxy_x = 88;
+int proxy_y = 24;
+
+
 void systemExit()
 {
 	//System Exit
@@ -54,25 +63,61 @@ int main(void)
 	
 	printf("OLED Show \r\n");
 	GUI_Show();
-	
-	while(1){
-		i++;
-		time(&now);
-		timenow = localtime(&now);
-	
-		if (IsEthConnected())
-			GUI_Disbitmap(0, 0, Eth_Available, 32, 32);
-		else
-			GUI_Disbitmap(0, 0, Eth_UnAvailable, 32, 32);
 
-		if (IsWlanConnected())
-			GUI_Disbitmap(0, 32, AP_Available, 32, 32);
-		else
-			GUI_Disbitmap(0, 32, AP_UnAvailable, 32, 32);
+	OLED_Clear(OLED_BACKGROUND);
+	GUI_Disbitmap(eth_x, eth_y, Eth_UnAvailable, 32, 32);
+	GUI_Disbitmap(wlan_x, wlan_y, AP_UnAvailable, 32, 32);
+	GUI_Disbitmap(proxy_x, proxy_y, Proxy_UnAvailable, 32, 32);
+	OLED_Display();		
+	DEV_Delay_ms(500);
+	OLED_Clear(OLED_BACKGROUND);
+
+
+	printf("Start\n");
+	while (1) {
+		// printf("Getting states...\t");
+		// char *EthState = "DisConnected";
+		// char *WlanState = "DisConnected";
+		// char *ProxyState = "DisConnected";
+
+		char *IpAddr = getIpAddr();
+		bool eth_state = IsEthConnected();
+		bool wlan_state = IsWlanConnected();
+		bool proxy_state = IsProxyConnected();
 		
+		// if (eth_state)
+		// 	EthState = "Connected";
+		// if (wlan_state)
+		// 	WlanState = "Connected";
+		// if (proxy_state)
+		// 	ProxyState = "Connected";
+
+		GUI_DisString_EN(10, 4, IpAddr, &Font12, FONT_BACKGROUND, WHITE);
+
+		if (eth_state)
+			GUI_Disbitmap(eth_x, eth_y, Eth_Available, 32, 32);
+		else
+			GUI_Disbitmap(eth_x, eth_y, Eth_UnAvailable, 32, 32);
+
+		if (wlan_state)
+			GUI_Disbitmap(wlan_x, wlan_y, AP_Available, 32, 32);
+		else
+			GUI_Disbitmap(wlan_x, wlan_y, AP_UnAvailable, 32, 32);
+		
+		if (proxy_state)
+			GUI_Disbitmap(proxy_x, proxy_y, Proxy_Available, 32, 32);
+		else
+			GUI_Disbitmap(proxy_x, proxy_y, Proxy_UnAvailable, 32, 32);
+
+
+		// printf("IP: %s; ", IpAddr);
+		// printf("Eth: %s; ", EthState);
+		// printf("Wlan: %s; ", WlanState);
+		// printf("Proxy: %s\n", ProxyState);
+
 		OLED_Display();		
 		OLED_Clear(OLED_BACKGROUND);
-		usleep(500 * 1000);
+		// DEV_Delay_ms(500);
 	}
 	
 	//3.System Exit
