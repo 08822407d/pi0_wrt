@@ -1,0 +1,407 @@
+[
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/src/main.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/src/main.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src/main.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/Config/DEV_Config.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config/DEV_Config.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config/DEV_Config.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/Config/RPI_gpiod.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config/RPI_gpiod.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config/RPI_gpiod.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/Config/dev_hardware_SPI.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config/dev_hardware_SPI.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config/dev_hardware_SPI.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/Config/sysfs_gpio.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config/sysfs_gpio.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config/sysfs_gpio.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/Config/sysfs_software_spi.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config/sysfs_software_spi.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config/sysfs_software_spi.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/Fonts/font12.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts/font12.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts/font12.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/Fonts/font12CN.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts/font12CN.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts/font12CN.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/Fonts/font16.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts/font16.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts/font16.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/Fonts/font20.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts/font20.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts/font20.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/Fonts/font24.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts/font24.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts/font24.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/Fonts/font24CN.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts/font24CN.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts/font24CN.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/Fonts/font8.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts/font8.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts/font8.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/GUI/GUI_BMPfile.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI/GUI_BMPfile.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI/GUI_BMPfile.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/GUI/GUI_Paint.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI/GUI_Paint.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI/GUI_Paint.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_10in2b.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_10in2b.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_10in2b.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_13in3b.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_13in3b.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_13in3b.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_13in3k.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_13in3k.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_13in3k.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_1in02d.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_1in02d.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_1in02d.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_1in54.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_1in54.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_1in54.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_1in54_DES.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_1in54_DES.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_1in54_DES.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_1in54_V2.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_1in54_V2.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_1in54_V2.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_1in54b.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_1in54b.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_1in54b.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_1in54b_V2.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_1in54b_V2.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_1in54b_V2.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_1in54c.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_1in54c.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_1in54c.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_1in64g.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_1in64g.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_1in64g.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_2in13.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in13.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in13.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_2in13_DES.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in13_DES.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in13_DES.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_2in13_V2.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in13_V2.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in13_V2.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_2in13_V3.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in13_V3.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in13_V3.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_2in13_V4.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in13_V4.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in13_V4.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_2in13b_V3.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in13b_V3.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in13b_V3.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_2in13b_V4.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in13b_V4.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in13b_V4.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_2in13bc.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in13bc.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in13bc.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_2in13d.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in13d.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in13d.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_2in13g.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in13g.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in13g.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_2in36g.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in36g.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in36g.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_2in66.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in66.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in66.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_2in66b.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in66b.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in66b.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_2in66g.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in66g.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in66g.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_2in7.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in7.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in7.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_2in7_V2.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in7_V2.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in7_V2.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_2in7b.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in7b.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in7b.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_2in7b_V2.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in7b_V2.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in7b_V2.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_2in9.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in9.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in9.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_2in9_DES.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in9_DES.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in9_DES.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_2in9_V2.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in9_V2.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in9_V2.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_2in9b_V3.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in9b_V3.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in9b_V3.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_2in9b_V4.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in9b_V4.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in9b_V4.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_2in9bc.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in9bc.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in9bc.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_2in9d.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in9d.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_2in9d.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_3in0g.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_3in0g.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_3in0g.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_3in52.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_3in52.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_3in52.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_3in7.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_3in7.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_3in7.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_4in01f.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_4in01f.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_4in01f.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_4in2.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_4in2.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_4in2.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_4in26.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_4in26.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_4in26.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_4in2_V2.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_4in2_V2.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_4in2_V2.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_4in2b_V2.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_4in2b_V2.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_4in2b_V2.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_4in2bc.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_4in2bc.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_4in2bc.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_4in37b.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_4in37b.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_4in37b.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_4in37g.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_4in37g.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_4in37g.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_5in65f.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_5in65f.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_5in65f.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_5in79.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_5in79.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_5in79.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_5in79b.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_5in79b.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_5in79b.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_5in83.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_5in83.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_5in83.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_5in83_V2.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_5in83_V2.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_5in83_V2.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_5in83b_V2.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_5in83b_V2.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_5in83b_V2.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_5in83bc.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_5in83bc.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_5in83bc.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_5in84.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_5in84.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_5in84.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_7in3f.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_7in3f.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_7in3f.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_7in3g.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_7in3g.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_7in3g.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_7in5.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_7in5.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_7in5.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_7in5_HD.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_7in5_HD.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_7in5_HD.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_7in5_V2.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_7in5_V2.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_7in5_V2.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_7in5b_HD.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_7in5b_HD.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_7in5b_HD.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_7in5b_V2.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_7in5b_V2.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_7in5b_V2.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/lib/e-Paper/EPD_7in5bc.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_7in5bc.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper/EPD_7in5bc.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/src/showip.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/src/showip.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src/showip.c"
+},
+{
+  "directory": "/home/cheyh/projs/pi0_wrt/build",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Config -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/e-Paper -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/Fonts -I/home/cheyh/projs/pi0_wrt/spi_2in13_epd/lib/GUI  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_LGPIO_LIB -DRPI -g -o CMakeFiles/wrt_info.dir/src/utils.c.o -c /home/cheyh/projs/pi0_wrt/spi_2in13_epd/src/utils.c",
+  "file": "/home/cheyh/projs/pi0_wrt/spi_2in13_epd/src/utils.c"
+}
+]

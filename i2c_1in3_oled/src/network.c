@@ -1,10 +1,32 @@
-#include <stdio.h>
-#include <string.h>
-#include <time.h> 
-#include <unistd.h>
-#include <limits.h>
-
 #include "network.h"
+
+
+extern sig_atomic_t stop;
+
+pthread_t network_thread;
+
+void* network_monitor(void* arg) {
+	netstate_s *Status = (netstate_s *)arg;
+    while (!stop) {
+		bool eth_state = IsEthConnected();
+		bool wlan_state = IsWlanConnected();
+		bool proxy_state = IsProxyConnected();
+		char *ip = getIpAddr();
+
+
+        pthread_mutex_lock(&Status->netstate_lock);
+
+		Status->EthWorking = eth_state;
+		Status->WlanWorking = wlan_state;
+		Status->ProxyWorking = proxy_state;
+		Status->IpAddr = ip;
+
+        pthread_mutex_unlock(&Status->netstate_lock);
+
+		usleep(200 * 1000);
+    }
+    return NULL;
+}
 
 
 
@@ -148,7 +170,6 @@ retry:
 }
 
 #define CMD_OUTBUF_LEN	4096
-static char net_state_up[] = "state UP";
 static char cmd_output_buf[CMD_OUTBUF_LEN];
 
 bool IsEthConnected() {
@@ -188,9 +209,6 @@ retry:
 		usleep(100 * 1000);
 	}
 }
-
-
-static char proxy_connected[] = "saved";
 
 bool IsProxyConnected() {
 	while (1) {

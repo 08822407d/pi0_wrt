@@ -55,22 +55,20 @@ stdint.h
 -
 
 ../include/network.h
+stdio.h
+-
+string.h
+-
+unistd.h
+-
+pthread.h
+-
+signal.h
+-
+limits.h
+-
 stdbool.h
 -
-
-/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/lib/OLED/OLED_Driver.c
-stdio.h
--
-OLED_Driver.h
-/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/lib/OLED/OLED_Driver.h
-
-/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/lib/OLED/OLED_GUI.c
-stdio.h
--
-OLED_GUI.h
-/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/lib/OLED/OLED_GUI.h
-DEV_Config.h
-/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/lib/OLED/DEV_Config.h
 
 /home/cheyh/projs/pi0_wrt/i2c_1in3_oled/src/main.c
 stdio.h

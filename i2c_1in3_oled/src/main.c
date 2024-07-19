@@ -10,6 +10,9 @@
 
 #include "network.h"
 
+pthread_cond_t cond;
+volatile sig_atomic_t stop = 0;
+netstate_s NetWork_Status;
 
 int eth_x = 8;
 int eth_y = 24;
@@ -42,15 +45,26 @@ void terminateHandler(int signo)
 char value[10] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
 int main(void)
 {
+	// 初始化互斥锁和条件变量
+	if (pthread_mutex_init(&NetWork_Status.netstate_lock, NULL) != 0 ||
+		pthread_cond_init(&cond, NULL) != 0) {
+		fprintf(stderr, "Mutex or Cond init failed\n");
+		return 1;
+	}
+	// 创建线程
+	// if (pthread_create(&network_thread, NULL, network_monitor, NULL) != 0 ||
+	// 	pthread_create(&gpio_thread, NULL, gpio_listener, NULL) != 0 ||
+	// 	pthread_create(&display_thread, NULL, display_status, NULL) != 0) {
+	if (pthread_create(&network_thread, NULL, network_monitor, &NetWork_Status) != 0) {
+		fprintf(stderr, "Error creating thread\n");
+		return 1;
+	}
 	// Exception handling:ctrl + c
 	signal(SIGINT, terminateHandler);
 	// System shutdown handling
 	signal(SIGTERM, terminateHandler);
 
 
-	time_t now;
-	struct tm *timenow;
-	int i;
 	//1.System Initialization
 	if(DEV_ModuleInit())
 		exit(0);
@@ -79,10 +93,14 @@ int main(void)
 		// char *WlanState = "DisConnected";
 		// char *ProxyState = "DisConnected";
 
-		char *IpAddr = getIpAddr();
-		bool eth_state = IsEthConnected();
-		bool wlan_state = IsWlanConnected();
-		bool proxy_state = IsProxyConnected();
+		pthread_mutex_lock(&NetWork_Status.netstate_lock);
+
+		bool eth_state = NetWork_Status.EthWorking;
+		bool wlan_state = NetWork_Status.WlanWorking;
+		bool proxy_state = NetWork_Status.ProxyWorking;
+		char *IpAddr = NetWork_Status.IpAddr;
+
+        pthread_mutex_unlock(&NetWork_Status.netstate_lock);
 		
 		// if (eth_state)
 		// 	EthState = "Connected";
@@ -116,7 +134,7 @@ int main(void)
 
 		OLED_Display();		
 		OLED_Clear(OLED_BACKGROUND);
-		// DEV_Delay_ms(500);
+		DEV_Delay_ms(500);
 	}
 	
 	//3.System Exit

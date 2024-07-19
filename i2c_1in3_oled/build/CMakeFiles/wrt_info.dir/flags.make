@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/include -I/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/src -I/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/lib/Fonts
+C_INCLUDES = -I/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/include
 
-C_FLAGS =  -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_WIRINGPI_LIB -DRPI
+C_FLAGS =  -pthread -Wl,--gc-sections -g -O -ffunction-sections -fdata-sections -Wall -DUSE_WIRINGPI_LIB -DRPI
 
