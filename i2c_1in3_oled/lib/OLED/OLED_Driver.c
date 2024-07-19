@@ -9,8 +9,10 @@
 Image scanning:
 Please use progressive scanning to generate images or fonts
 ***********************************************************************************************************************/
-#include "OLED_Driver.h"
 #include <stdio.h>
+
+#include "OLED_Driver.h"
+
 OLED_DIS sOLED_DIS;
 char Buffer[OLED_WIDTH *OLED_HEIGHT /8];
 /***********************************************************************************************************************

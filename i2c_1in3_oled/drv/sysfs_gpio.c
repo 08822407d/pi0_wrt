@@ -28,14 +28,16 @@
 # THE SOFTWARE.
 #
 ******************************************************************************/
-#include "sysfs_gpio.h"
-#include <sys/stat.h>
-#include <sys/types.h>
-#include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <fcntl.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+
+#include "sysfs_gpio.h"
+
 
 int SYSFS_GPIO_Export(int Pin)
 {

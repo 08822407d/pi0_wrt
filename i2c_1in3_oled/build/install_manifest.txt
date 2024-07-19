@@ -1,0 +1,1 @@
+/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/./wrt_info

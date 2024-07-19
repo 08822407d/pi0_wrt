@@ -1,0 +1,7 @@
+/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/build/CMakeFiles/install/strip.dir
+/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/build/CMakeFiles/install/local.dir
+/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/build/CMakeFiles/install.dir
+/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/build/CMakeFiles/list_install_components.dir
+/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/build/CMakeFiles/rebuild_cache.dir
+/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/build/CMakeFiles/edit_cache.dir
+/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/build/CMakeFiles/wrt_info.dir

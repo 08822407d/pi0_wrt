@@ -28,12 +28,8 @@
 # THE SOFTWARE.
 #
 ******************************************************************************/
-#include "dev_hardware_SPI.h"
-
-
 #include <stdlib.h>
 #include <stdio.h>
-
 #include <stdint.h> 
 #include <unistd.h> 
 #include <stdio.h> 
@@ -43,6 +39,9 @@
 #include <sys/ioctl.h> 
 #include <linux/types.h> 
 #include <linux/spi/spidev.h> 
+
+#include "dev_hardware_SPI.h"
+
 
 HARDWARE_SPI hardware_SPI;
 

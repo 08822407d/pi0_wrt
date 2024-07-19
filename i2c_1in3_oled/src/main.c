@@ -9,7 +9,6 @@
 #include "KEY_APP.h"
 
 #include "network.h"
-// #include "../sysinfo/network.h"
 
 
 int eth_x = 8;
