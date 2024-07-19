@@ -38,9 +38,25 @@ CMakeFiles/wrt_info.dir/src/main.c.o: ../include/KEY_APP.h
 CMakeFiles/wrt_info.dir/src/main.c.o: ../include/OLED_Driver.h
 CMakeFiles/wrt_info.dir/src/main.c.o: ../include/OLED_GUI.h
 CMakeFiles/wrt_info.dir/src/main.c.o: ../include/fonts.h
+CMakeFiles/wrt_info.dir/src/main.c.o: ../include/glob.h
 CMakeFiles/wrt_info.dir/src/main.c.o: ../include/network.h
+CMakeFiles/wrt_info.dir/src/main.c.o: ../include/screen_disp.h
+CMakeFiles/wrt_info.dir/src/main.c.o: ../include/types.h
 CMakeFiles/wrt_info.dir/src/main.c.o: ../src/main.c
 
+CMakeFiles/wrt_info.dir/src/network.c.o: ../include/glob.h
 CMakeFiles/wrt_info.dir/src/network.c.o: ../include/network.h
+CMakeFiles/wrt_info.dir/src/network.c.o: ../include/types.h
 CMakeFiles/wrt_info.dir/src/network.c.o: ../src/network.c
+
+CMakeFiles/wrt_info.dir/src/screen_disp.c.o: ../include/DEV_Config.h
+CMakeFiles/wrt_info.dir/src/screen_disp.c.o: ../include/Debug.h
+CMakeFiles/wrt_info.dir/src/screen_disp.c.o: ../include/KEY_APP.h
+CMakeFiles/wrt_info.dir/src/screen_disp.c.o: ../include/OLED_Driver.h
+CMakeFiles/wrt_info.dir/src/screen_disp.c.o: ../include/OLED_GUI.h
+CMakeFiles/wrt_info.dir/src/screen_disp.c.o: ../include/fonts.h
+CMakeFiles/wrt_info.dir/src/screen_disp.c.o: ../include/glob.h
+CMakeFiles/wrt_info.dir/src/screen_disp.c.o: ../include/screen_disp.h
+CMakeFiles/wrt_info.dir/src/screen_disp.c.o: ../include/types.h
+CMakeFiles/wrt_info.dir/src/screen_disp.c.o: ../src/screen_disp.c
 

@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/lib/OLED/OLED_GUI.c" "/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/build/CMakeFiles/wrt_info.dir/lib/OLED/OLED_GUI.c.o"
   "/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/src/main.c" "/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/build/CMakeFiles/wrt_info.dir/src/main.c.o"
   "/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/src/network.c" "/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/build/CMakeFiles/wrt_info.dir/src/network.c.o"
+  "/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/src/screen_disp.c" "/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/build/CMakeFiles/wrt_info.dir/src/screen_disp.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

@@ -1,12 +1,13 @@
+#include "glob.h"
 #include "network.h"
 
 
-extern sig_atomic_t stop;
-
 pthread_t network_thread;
 
-void* network_monitor(void* arg) {
+void *network_monitor(void* arg) {
+
 	netstate_s *Status = (netstate_s *)arg;
+
     while (!stop) {
 		bool eth_state = IsEthConnected();
 		bool wlan_state = IsWlanConnected();
@@ -14,14 +15,14 @@ void* network_monitor(void* arg) {
 		char *ip = getIpAddr();
 
 
-        pthread_mutex_lock(&Status->netstate_lock);
+        pthread_mutex_lock(&Status->lock);
 
 		Status->EthWorking = eth_state;
 		Status->WlanWorking = wlan_state;
 		Status->ProxyWorking = proxy_state;
 		Status->IpAddr = ip;
 
-        pthread_mutex_unlock(&Status->netstate_lock);
+        pthread_mutex_unlock(&Status->lock);
 
 		usleep(200 * 1000);
     }

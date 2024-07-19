@@ -458,6 +458,33 @@ src/network.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/wrt_info.dir/build.make CMakeFiles/wrt_info.dir/src/network.c.s
 .PHONY : src/network.c.s
 
+src/screen_disp.o: src/screen_disp.c.o
+
+.PHONY : src/screen_disp.o
+
+# target to build an object file
+src/screen_disp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wrt_info.dir/build.make CMakeFiles/wrt_info.dir/src/screen_disp.c.o
+.PHONY : src/screen_disp.c.o
+
+src/screen_disp.i: src/screen_disp.c.i
+
+.PHONY : src/screen_disp.i
+
+# target to preprocess a source file
+src/screen_disp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wrt_info.dir/build.make CMakeFiles/wrt_info.dir/src/screen_disp.c.i
+.PHONY : src/screen_disp.c.i
+
+src/screen_disp.s: src/screen_disp.c.s
+
+.PHONY : src/screen_disp.s
+
+# target to generate assembly for a file
+src/screen_disp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wrt_info.dir/build.make CMakeFiles/wrt_info.dir/src/screen_disp.c.s
+.PHONY : src/screen_disp.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -501,6 +528,9 @@ help:
 	@echo "... src/network.o"
 	@echo "... src/network.i"
 	@echo "... src/network.s"
+	@echo "... src/screen_disp.o"
+	@echo "... src/screen_disp.i"
+	@echo "... src/screen_disp.s"
 .PHONY : help
 
 

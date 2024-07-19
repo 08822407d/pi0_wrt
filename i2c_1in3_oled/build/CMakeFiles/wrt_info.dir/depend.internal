@@ -39,8 +39,24 @@ CMakeFiles/wrt_info.dir/src/main.c.o
  ../include/OLED_Driver.h
  ../include/OLED_GUI.h
  ../include/fonts.h
+ ../include/glob.h
  ../include/network.h
+ ../include/screen_disp.h
+ ../include/types.h
  /home/cheyh/projs/pi0_wrt/i2c_1in3_oled/src/main.c
 CMakeFiles/wrt_info.dir/src/network.c.o
+ ../include/glob.h
  ../include/network.h
+ ../include/types.h
  /home/cheyh/projs/pi0_wrt/i2c_1in3_oled/src/network.c
+CMakeFiles/wrt_info.dir/src/screen_disp.c.o
+ ../include/DEV_Config.h
+ ../include/Debug.h
+ ../include/KEY_APP.h
+ ../include/OLED_Driver.h
+ ../include/OLED_GUI.h
+ ../include/fonts.h
+ ../include/glob.h
+ ../include/screen_disp.h
+ ../include/types.h
+ /home/cheyh/projs/pi0_wrt/i2c_1in3_oled/src/screen_disp.c

@@ -54,7 +54,19 @@ fonts.h
 stdint.h
 -
 
+../include/glob.h
+types.h
+../include/types.h
+
 ../include/network.h
+types.h
+../include/types.h
+
+../include/screen_disp.h
+types.h
+../include/types.h
+
+../include/types.h
 stdio.h
 -
 string.h
@@ -87,6 +99,10 @@ DEV_Config.h
 /home/cheyh/projs/pi0_wrt/i2c_1in3_oled/src/DEV_Config.h
 KEY_APP.h
 /home/cheyh/projs/pi0_wrt/i2c_1in3_oled/src/KEY_APP.h
+glob.h
+/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/src/glob.h
 network.h
 /home/cheyh/projs/pi0_wrt/i2c_1in3_oled/src/network.h
+screen_disp.h
+/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/src/screen_disp.h
 

@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/wrt_info.dir/lib/OLED/OLED_GUI.c.o"
   "CMakeFiles/wrt_info.dir/src/main.c.o"
   "CMakeFiles/wrt_info.dir/src/network.c.o"
+  "CMakeFiles/wrt_info.dir/src/screen_disp.c.o"
   "wrt_info"
   "wrt_info.pdb"
 )
