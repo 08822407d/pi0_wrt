@@ -26,6 +26,8 @@ void *network_monitor(void* arg) {
 
 		usleep(200 * 1000);
     }
+
+	printf("Thread: network_monitor Exiting.\n");
     return NULL;
 }
 

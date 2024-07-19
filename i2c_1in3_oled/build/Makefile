@@ -404,6 +404,33 @@ lib/OLED/OLED_GUI.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/wrt_info.dir/build.make CMakeFiles/wrt_info.dir/lib/OLED/OLED_GUI.c.s
 .PHONY : lib/OLED/OLED_GUI.c.s
 
+src/keys.o: src/keys.c.o
+
+.PHONY : src/keys.o
+
+# target to build an object file
+src/keys.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wrt_info.dir/build.make CMakeFiles/wrt_info.dir/src/keys.c.o
+.PHONY : src/keys.c.o
+
+src/keys.i: src/keys.c.i
+
+.PHONY : src/keys.i
+
+# target to preprocess a source file
+src/keys.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wrt_info.dir/build.make CMakeFiles/wrt_info.dir/src/keys.c.i
+.PHONY : src/keys.c.i
+
+src/keys.s: src/keys.c.s
+
+.PHONY : src/keys.s
+
+# target to generate assembly for a file
+src/keys.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wrt_info.dir/build.make CMakeFiles/wrt_info.dir/src/keys.c.s
+.PHONY : src/keys.c.s
+
 src/main.o: src/main.c.o
 
 .PHONY : src/main.o
@@ -522,6 +549,9 @@ help:
 	@echo "... lib/OLED/OLED_GUI.o"
 	@echo "... lib/OLED/OLED_GUI.i"
 	@echo "... lib/OLED/OLED_GUI.s"
+	@echo "... src/keys.o"
+	@echo "... src/keys.i"
+	@echo "... src/keys.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

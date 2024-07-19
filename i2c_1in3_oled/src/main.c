@@ -20,15 +20,28 @@ glob_s GlobData;
 
 void systemExit()
 {
+	netstate_s *NetStat = &GlobData.NetWork_Status;
+	dispstate_s *DispStat = &GlobData.Display_Status;
+
+	stop = 1;
+	pthread_cond_broadcast(&cond);	// 确保所有线程能够退出
+
+    // 等待线程结束
+    pthread_join(network_thread, NULL);
+    pthread_join(display_thread, NULL);
+    // pthread_join(gpio_thread, NULL);
+
+    // 销毁互斥锁和条件变量
+    pthread_mutex_destroy(&NetStat->lock);
+    pthread_mutex_destroy(&DispStat->lock);
+    pthread_cond_destroy(&cond);
+
 	//System Exit
 	OLED_Clear(OLED_BACKGROUND);
 	OLED_Display();
 
 	printf("Goto Sleep...\r\n");
 	DEV_ModuleExit();
-
-	stop = 1;
-	pthread_cond_broadcast(&cond); // 确保所有线程能够退出
 }
 
 void terminateHandler(int signo)
@@ -44,7 +57,7 @@ void screen_init()
 {
 	//1.System Initialization
 	if(DEV_ModuleInit())
-		exit(0);
+		exit(1);
 	
 	//2.show
 	printf("**********Init OLED**********\r\n");
@@ -87,7 +100,7 @@ int main(void)
 	// 	pthread_create(&gpio_thread, NULL, gpio_listener, NULL) != 0 ||
 	// 	pthread_create(&display_thread, NULL, display_status, NULL) != 0) {
 	if (pthread_create(&network_thread, NULL, network_monitor, NetStat) != 0 ||
-		pthread_create(&display_thread, NULL, display_status, &GlobData) != 0) {
+		pthread_create(&display_thread, NULL, display_sysstatus, &GlobData) != 0) {
 		fprintf(stderr, "Error creating thread\n");
 		return 1;
 	}
@@ -101,9 +114,6 @@ int main(void)
 	}
 	
 	//3.System Exit
-	// OLED_Clear(OLED_BACKGROUND);
-	// OLED_Display();
-	// DEV_ModuleExit();
 	systemExit();
 	return 0;
 }

@@ -12,6 +12,6 @@
     extern int proxy_y;
 
 	extern pthread_t display_thread;
-    extern void *display_status(void* arg);
+    extern void *display_sysstatus(void* arg);
 
 #endif /* _SCREEN_DISPLAY_H_ */

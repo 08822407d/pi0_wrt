@@ -4,7 +4,6 @@
 #include "OLED_Driver.h"
 #include "OLED_GUI.h"
 #include "DEV_Config.h"
-#include "KEY_APP.h"
 
 
 int eth_x = 8;
@@ -16,7 +15,7 @@ int proxy_y = 24;
 
 pthread_t display_thread;
 
-void *display_status(void* arg) {
+void *display_sysstatus(void* arg) {
 
 	glob_s *Glob = (glob_s *)arg;
 	netstate_s *NetStat = &Glob->NetWork_Status;
@@ -24,9 +23,10 @@ void *display_status(void* arg) {
 
 	while (!stop) {
 		pthread_mutex_lock(&DispStat->lock);
-		while (!DispStat->Active) {
+		while (!DispStat->Active && !stop) {
 			pthread_cond_wait(&cond, &DispStat->lock); // 等待唤醒信号
 		}
+		DispStat->Active = true;
 		pthread_mutex_unlock(&DispStat->lock);
 
 		for (int i = 0; i < 20 && !stop; ++i) {
@@ -87,5 +87,7 @@ void *display_status(void* arg) {
 		OLED_Display();
 		pthread_mutex_unlock(&DispStat->lock);
 	}
+
+	printf("Thread: display_sysstatus Exiting.\n");
 	return NULL;
 }
