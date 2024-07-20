@@ -1,5 +1,5 @@
 [Unit]
-Description=RPI0-WRT Service
+Description=OPI0-WRT Service
 After=network.target
 
 [Service]
@@ -8,8 +8,8 @@ ExecStart=/usr/local/bin/wrt_info
 ExecReload=/usr/local/bin/wrt_info
 Restart=always
 RestartSec=5
-User=cheyh
-Group=cheyh
+User=root
+Group=root
 
 [Install]
 WantedBy=multi-user.target

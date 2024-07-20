@@ -193,18 +193,18 @@ CMakeFiles/wrt_info.dir/lib/OLED/OLED_GUI.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/wrt_info.dir/lib/OLED/OLED_GUI.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cheyh/projs/pi0_wrt/i2c_1in3_oled/lib/OLED/OLED_GUI.c -o CMakeFiles/wrt_info.dir/lib/OLED/OLED_GUI.c.s
 
-CMakeFiles/wrt_info.dir/src/keys.c.o: CMakeFiles/wrt_info.dir/flags.make
-CMakeFiles/wrt_info.dir/src/keys.c.o: ../src/keys.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/wrt_info.dir/src/keys.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/wrt_info.dir/src/keys.c.o -c /home/cheyh/projs/pi0_wrt/i2c_1in3_oled/src/keys.c
+CMakeFiles/wrt_info.dir/src/gpios.c.o: CMakeFiles/wrt_info.dir/flags.make
+CMakeFiles/wrt_info.dir/src/gpios.c.o: ../src/gpios.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cheyh/projs/pi0_wrt/i2c_1in3_oled/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/wrt_info.dir/src/gpios.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/wrt_info.dir/src/gpios.c.o -c /home/cheyh/projs/pi0_wrt/i2c_1in3_oled/src/gpios.c
 
-CMakeFiles/wrt_info.dir/src/keys.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/wrt_info.dir/src/keys.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cheyh/projs/pi0_wrt/i2c_1in3_oled/src/keys.c > CMakeFiles/wrt_info.dir/src/keys.c.i
+CMakeFiles/wrt_info.dir/src/gpios.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/wrt_info.dir/src/gpios.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cheyh/projs/pi0_wrt/i2c_1in3_oled/src/gpios.c > CMakeFiles/wrt_info.dir/src/gpios.c.i
 
-CMakeFiles/wrt_info.dir/src/keys.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/wrt_info.dir/src/keys.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cheyh/projs/pi0_wrt/i2c_1in3_oled/src/keys.c -o CMakeFiles/wrt_info.dir/src/keys.c.s
+CMakeFiles/wrt_info.dir/src/gpios.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/wrt_info.dir/src/gpios.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cheyh/projs/pi0_wrt/i2c_1in3_oled/src/gpios.c -o CMakeFiles/wrt_info.dir/src/gpios.c.s
 
 CMakeFiles/wrt_info.dir/src/network.c.o: CMakeFiles/wrt_info.dir/flags.make
 CMakeFiles/wrt_info.dir/src/network.c.o: ../src/network.c
@@ -243,7 +243,7 @@ wrt_info_OBJECTS = \
 "CMakeFiles/wrt_info.dir/lib/Fonts/font8.c.o" \
 "CMakeFiles/wrt_info.dir/lib/OLED/OLED_Driver.c.o" \
 "CMakeFiles/wrt_info.dir/lib/OLED/OLED_GUI.c.o" \
-"CMakeFiles/wrt_info.dir/src/keys.c.o" \
+"CMakeFiles/wrt_info.dir/src/gpios.c.o" \
 "CMakeFiles/wrt_info.dir/src/network.c.o" \
 "CMakeFiles/wrt_info.dir/src/screen_disp.c.o"
 
@@ -259,7 +259,7 @@ wrt_info: CMakeFiles/wrt_info.dir/lib/Fonts/font24.c.o
 wrt_info: CMakeFiles/wrt_info.dir/lib/Fonts/font8.c.o
 wrt_info: CMakeFiles/wrt_info.dir/lib/OLED/OLED_Driver.c.o
 wrt_info: CMakeFiles/wrt_info.dir/lib/OLED/OLED_GUI.c.o
-wrt_info: CMakeFiles/wrt_info.dir/src/keys.c.o
+wrt_info: CMakeFiles/wrt_info.dir/src/gpios.c.o
 wrt_info: CMakeFiles/wrt_info.dir/src/network.c.o
 wrt_info: CMakeFiles/wrt_info.dir/src/screen_disp.c.o
 wrt_info: CMakeFiles/wrt_info.dir/build.make

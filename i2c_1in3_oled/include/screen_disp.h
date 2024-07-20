@@ -13,5 +13,7 @@
 
 	extern pthread_t display_thread;
     extern void *display_sysstatus(void* arg);
+    extern void activeScreen(dispstate_s *DispStat);
+    extern void deactiveScreen(dispstate_s *DispStat);
 
 #endif /* _SCREEN_DISPLAY_H_ */

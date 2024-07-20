@@ -32,14 +32,15 @@ CMakeFiles/wrt_info.dir/lib/OLED/OLED_GUI.c.o
  ../include/OLED_GUI.h
  ../include/fonts.h
  /home/cheyh/projs/pi0_wrt/i2c_1in3_oled/lib/OLED/OLED_GUI.c
-CMakeFiles/wrt_info.dir/src/keys.c.o
+CMakeFiles/wrt_info.dir/src/gpios.c.o
  ../include/DEV_Config.h
  ../include/Debug.h
  ../include/KEY_APP.h
  ../include/glob.h
- ../include/keys.h
+ ../include/gpio_listener.h
+ ../include/screen_disp.h
  ../include/types.h
- /home/cheyh/projs/pi0_wrt/i2c_1in3_oled/src/keys.c
+ /home/cheyh/projs/pi0_wrt/i2c_1in3_oled/src/gpios.c
 CMakeFiles/wrt_info.dir/src/main.c.o
  ../include/DEV_Config.h
  ../include/Debug.h
@@ -48,6 +49,7 @@ CMakeFiles/wrt_info.dir/src/main.c.o
  ../include/OLED_GUI.h
  ../include/fonts.h
  ../include/glob.h
+ ../include/gpio_listener.h
  ../include/network.h
  ../include/screen_disp.h
  ../include/types.h

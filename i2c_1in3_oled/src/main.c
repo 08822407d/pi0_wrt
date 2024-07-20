@@ -11,11 +11,12 @@
 #include "glob.h"
 #include "network.h"
 #include "screen_disp.h"
+#include "gpio_listener.h"
+
 
 pthread_cond_t cond;
 volatile sig_atomic_t stop = 0;
 glob_s GlobData;
-
 
 
 void systemExit()
@@ -29,7 +30,7 @@ void systemExit()
     // 等待线程结束
     pthread_join(network_thread, NULL);
     pthread_join(display_thread, NULL);
-    // pthread_join(gpio_thread, NULL);
+    pthread_join(gpio_thread, NULL);
 
     // 销毁互斥锁和条件变量
     pthread_mutex_destroy(&NetStat->lock);
@@ -85,22 +86,24 @@ int main(void)
 
 	netstate_s *NetStat = &GlobData.NetWork_Status;
 	dispstate_s *DispStat = &GlobData.Display_Status;
+	keysstate_s *KeysStat = &GlobData.Keys_Status;
 	NetStat->IpAddr = "!!! 0.0.0.0 !!!";
 	DispStat->Active = true;
+	DispStat->ActiveTime = 0;
 
 	// 初始化互斥锁和条件变量
 	if (pthread_mutex_init(&NetStat->lock, NULL) != 0 ||
 		pthread_mutex_init(&DispStat->lock, NULL) != 0 ||
+		pthread_mutex_init(&KeysStat->lock, NULL) != 0 ||
 		pthread_cond_init(&cond, NULL) != 0) {
 		fprintf(stderr, "Mutex or Cond init failed\n");
 		return 1;
 	}
+	keys_reset(KeysStat);
 	// 创建线程
-	// if (pthread_create(&network_thread, NULL, network_monitor, NULL) != 0 ||
-	// 	pthread_create(&gpio_thread, NULL, gpio_listener, NULL) != 0 ||
-	// 	pthread_create(&display_thread, NULL, display_status, NULL) != 0) {
 	if (pthread_create(&network_thread, NULL, network_monitor, NetStat) != 0 ||
-		pthread_create(&display_thread, NULL, display_sysstatus, &GlobData) != 0) {
+		pthread_create(&display_thread, NULL, display_sysstatus, &GlobData) != 0 ||
+		pthread_create(&gpio_thread, NULL, gpio_listener, &GlobData) != 0) {
 		fprintf(stderr, "Error creating thread\n");
 		return 1;
 	}
@@ -108,6 +111,8 @@ int main(void)
 	signal(SIGINT, terminateHandler);
 	// System shutdown handling
 	signal(SIGTERM, terminateHandler);
+
+	activeScreen(DispStat);
 
 	while (1) {
 		sleep(1);

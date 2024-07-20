@@ -13,6 +13,7 @@ SEVICE_CONFIG=APconfig.service
 
 #修改service文件中程序的路径
 sed -i "/.*ExecStart*/c\ExecStart=$INSTALL_PATH/$EXEC_NAME" "$SEVICE_CONFIG"
+sed -i "/.*ExecReload*/c\ExecReload=$INSTALL_PATH/$EXEC_NAME" "$SEVICE_CONFIG"
 
 sudo systemctl stop $SEVICE_CONFIG
 # 复制程序文件到安装路径

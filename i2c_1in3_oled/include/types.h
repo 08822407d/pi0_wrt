@@ -22,7 +22,8 @@
 	typedef struct display_status {
 		pthread_mutex_t lock;
 
-		bool Active;
+		bool	Active;
+		int		ActiveTime;
 	} dispstate_s;
 
 	typedef struct keys_status {

@@ -3,6 +3,8 @@
     "files.associations": {
         "*.S": "gas",
         "epd.h": "c",
-        "signal.h": "c"
+        "signal.h": "c",
+        "glob.h": "c",
+        "gpio_listener.h": "c"
     }
 }

@@ -404,32 +404,32 @@ lib/OLED/OLED_GUI.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/wrt_info.dir/build.make CMakeFiles/wrt_info.dir/lib/OLED/OLED_GUI.c.s
 .PHONY : lib/OLED/OLED_GUI.c.s
 
-src/keys.o: src/keys.c.o
+src/gpios.o: src/gpios.c.o
 
-.PHONY : src/keys.o
+.PHONY : src/gpios.o
 
 # target to build an object file
-src/keys.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/wrt_info.dir/build.make CMakeFiles/wrt_info.dir/src/keys.c.o
-.PHONY : src/keys.c.o
+src/gpios.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wrt_info.dir/build.make CMakeFiles/wrt_info.dir/src/gpios.c.o
+.PHONY : src/gpios.c.o
 
-src/keys.i: src/keys.c.i
+src/gpios.i: src/gpios.c.i
 
-.PHONY : src/keys.i
+.PHONY : src/gpios.i
 
 # target to preprocess a source file
-src/keys.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/wrt_info.dir/build.make CMakeFiles/wrt_info.dir/src/keys.c.i
-.PHONY : src/keys.c.i
+src/gpios.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wrt_info.dir/build.make CMakeFiles/wrt_info.dir/src/gpios.c.i
+.PHONY : src/gpios.c.i
 
-src/keys.s: src/keys.c.s
+src/gpios.s: src/gpios.c.s
 
-.PHONY : src/keys.s
+.PHONY : src/gpios.s
 
 # target to generate assembly for a file
-src/keys.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/wrt_info.dir/build.make CMakeFiles/wrt_info.dir/src/keys.c.s
-.PHONY : src/keys.c.s
+src/gpios.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wrt_info.dir/build.make CMakeFiles/wrt_info.dir/src/gpios.c.s
+.PHONY : src/gpios.c.s
 
 src/main.o: src/main.c.o
 
@@ -549,9 +549,9 @@ help:
 	@echo "... lib/OLED/OLED_GUI.o"
 	@echo "... lib/OLED/OLED_GUI.i"
 	@echo "... lib/OLED/OLED_GUI.s"
-	@echo "... src/keys.o"
-	@echo "... src/keys.i"
-	@echo "... src/keys.s"
+	@echo "... src/gpios.o"
+	@echo "... src/gpios.i"
+	@echo "... src/gpios.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

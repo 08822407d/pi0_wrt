@@ -5,6 +5,8 @@
 #include "OLED_GUI.h"
 #include "DEV_Config.h"
 
+#define FPS			4
+#define ACTIVE_TIME	(10 * (FPS))
 
 int eth_x = 8;
 int eth_y = 24;
@@ -15,6 +17,22 @@ int proxy_y = 24;
 
 pthread_t display_thread;
 
+void activeScreen(dispstate_s *DispStat)
+{
+	pthread_mutex_lock(&DispStat->lock);
+	DispStat->ActiveTime = ACTIVE_TIME;
+	pthread_mutex_unlock(&DispStat->lock);
+
+	pthread_cond_signal(&cond);
+}
+
+void deactiveScreen(dispstate_s *DispStat)
+{
+	pthread_mutex_lock(&DispStat->lock);
+	DispStat->ActiveTime = 0;
+	pthread_mutex_unlock(&DispStat->lock);
+}
+
 void *display_sysstatus(void* arg) {
 
 	glob_s *Glob = (glob_s *)arg;
@@ -22,24 +40,17 @@ void *display_sysstatus(void* arg) {
 	dispstate_s *DispStat = &Glob->Display_Status;
 
 	while (!stop) {
-		pthread_mutex_lock(&DispStat->lock);
-		while (!DispStat->Active && !stop) {
-			pthread_cond_wait(&cond, &DispStat->lock); // 等待唤醒信号
-		}
-		DispStat->Active = true;
-		pthread_mutex_unlock(&DispStat->lock);
 
-		for (int i = 0; i < 20 && !stop; ++i) {
+		if (DispStat->ActiveTime > 0) {
+
+			DispStat->ActiveTime--;
 
 			pthread_mutex_lock(&NetStat->lock);
-
 			bool eth_state = NetStat->EthWorking;
 			bool wlan_state = NetStat->WlanWorking;
 			bool proxy_state = NetStat->ProxyWorking;
 			char *IpAddr = NetStat->IpAddr;
-
 			pthread_mutex_unlock(&NetStat->lock);
-
 
 			// printf("Getting states...\t");
 			// char *EthState = "DisConnected";
@@ -78,14 +89,20 @@ void *display_sysstatus(void* arg) {
 
 			OLED_Display();
 			OLED_Clear(OLED_BACKGROUND);
-			DEV_Delay_ms(500);
-		}
+			DEV_Delay_ms(1000 / FPS);
 
-		pthread_mutex_lock(&DispStat->lock);
-		DispStat->Active = false; // 进入睡眠状态
-		OLED_Clear(OLED_BACKGROUND);
-		OLED_Display();
-		pthread_mutex_unlock(&DispStat->lock);
+		} else {
+
+			pthread_mutex_lock(&DispStat->lock);
+
+			DispStat->Active = false; // 进入睡眠状态
+			OLED_Clear(OLED_BACKGROUND);
+			OLED_Display();
+			pthread_cond_wait(&cond, &DispStat->lock); // 等待唤醒信号
+
+			pthread_mutex_unlock(&DispStat->lock);
+
+		}
 	}
 
 	printf("Thread: display_sysstatus Exiting.\n");
